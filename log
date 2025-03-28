@@ -2,3 +2,37 @@ Fri, Mar 28, 2025 12:12:20 PM:
  tests:  0|6
 total_score: 0/70
 25021aa
+Fri, Mar 28, 2025 12:13:43 PM: 
+ list.c | 34 +++++++++++++++++++++++++++++++++-
+ 1 file changed, 33 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function 'createList':
+list.c:32:5: error: unknown type name 'list'
+     list *listaNueva = (list*)malloc(sizeof(list));
+     ^~~~
+list.c:32:25: error: 'list' undeclared (first use in this function)
+     list *listaNueva = (list*)malloc(sizeof(list));
+                         ^~~~
+list.c:32:25: note: each undeclared identifier is reported only once for each function it appears in
+list.c:32:30: error: expected expression before ')' token
+     list *listaNueva = (list*)malloc(sizeof(list));
+                              ^
+list.c:35:15: error: request for member 'head' in something not a structure or union
+     listaNueva-> head = NULL;
+               ^~
+list.c:36:15: error: request for member 'tail' in something not a structure or union
+     listaNueva-> tail = NULL;
+               ^~
+list.c:37:15: error: request for member 'current' in something not a structure or union
+     listaNueva-> current = NULL;
+               ^~
+list.c:40:13: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+      return listaNueva;
+             ^~~~~~~~~~
+list.c: In function 'prevList':
+list.c:76:34: error: 'data' undeclared (first use in this function)
+             return list->current-data;
+                                  ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+edb7948
