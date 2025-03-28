@@ -73,7 +73,7 @@ void * prevList(List * list) {
     if(list->current != NULL){
         list->current = list->current->prev;
         if(list->current != NULL){
-            return list->current-data;
+            return list->current->data;
         }
 
     }
